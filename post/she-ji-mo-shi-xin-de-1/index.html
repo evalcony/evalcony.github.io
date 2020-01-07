@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>flag | evalcony</title>
+<title>设计模式心得（1） | evalcony</title>
 <meta name="description" content="不改少年">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,18 +86,62 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">flag</h2>
+          <h2 class="post-title">设计模式心得（1）</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-01-05</span>
+            <span><i class="icon-calendar-outline"></i> 2020-01-08</span>
             
           </div>
           <div class="post-content">
-            <p>这是立下的各种flag。。。</p>
+            <p>*** KISS（keep it simple &amp; stupid）<br>
+这个原则其实是说 keep it easy understand。让代码尽可能易于理解。<br>
+要看一个做法是否牺牲了理解性。易理解才是目的。所谓的代码长短，简洁与否，效率高低，都不是重点，不要纠结在这种事情上。</p>
+<p>*** DRY（don't repeat yourself） 原则<br>
+其实是，看代码可以在哪个角度/维度上进行解耦/独立/正交化。<br>
+使代码积木化。</p>
+<p>*** 高内聚，低耦合<br>
+这个原则有一个非常精道的阐述，「缩小因功能改动而导致的代码改动范围」。换言之，使任何改动的影响范围尽可能小和集中。</p>
+<p>*** 迪米特法则<br>
+这个原则远不如它的另一个名字来的直观、精妙、令人回味，「最小知识原则」。<br>
+不该知道的就不需要知道。脑中浮现出傻强的形象：「这个东西我不需要知道太多，老大们知道就可以了。我主要负责冲锋。」</p>
+<p>*** 下面是一些更为零散的点</p>
+<p>基于最小接口，而非最大实现编程。<br>
+这也是最小知识原则的一个体现。</p>
+<p>如果一个功能的改动，经常不得不跨团队、跨项目、跨系统才能完成，那么说明模块的划分有问题。职责不够清晰，耦合比较严重。</p>
+<p>上下层系统之间的调用倾向于通过同步接口。<br>
+同层之间的调用倾向于异步接口。</p>
+<p>面向对象设计和实现要做的事情，就是把合适的代码放到合适的类中。</p>
+<p>冯诺依曼经典模型：输入+输出+运算+存储+控制<br>
+这个模式，可以作为中大型结构设计的范式。</p>
+<p>重构。重构不是一步到位的，而是逐步迭代。</p>
+<p>大型重构的步骤<br>
+1.列出计划，按计划分批次执行。<br>
+2.每次重构，都要进行测试，确保前后状态一致。<br>
+3.每次控制好重构的影响范围，考虑好兼容老代码。避免一次重构的过程太长。</p>
+<p>单元测试等测试手段对于重构非常重要。<br>
+其他利好</p>
+<ul>
+<li>帮助自己实现bug free</li>
+<li>发现设计上的问题（如果测起来很麻烦，说明你的设计有问题）</li>
+<li>单元测试本身就是对代码重构的过程</li>
+</ul>
+<p>测试层级</p>
+<ul>
+<li>单元测试：方法，对象</li>
+<li>集成测试：功能模块</li>
+</ul>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://evalcony.github.io/post/hello-gridea">
+              <h3 class="post-title">
+                下一篇：Hello Gridea
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       
