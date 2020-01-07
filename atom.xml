@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://evalcony.github.io</id>
     <title>evalcony</title>
-    <updated>2020-01-07T23:05:19.553Z</updated>
+    <updated>2020-01-07T23:09:09.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://evalcony.github.io"/>
     <link rel="self" href="https://evalcony.github.io/atom.xml"/>
@@ -16,18 +16,18 @@
         <link href="https://evalcony.github.io/post/she-ji-mo-shi-xin-de-1">
         </link>
         <updated>2020-01-07T22:46:22.000Z</updated>
-        <content type="html"><![CDATA[<p>*** KISS（keep it simple &amp; stupid）<br>
+        <content type="html"><![CDATA[<p><strong>KISS（keep it simple &amp; stupid</strong><br>
 这个原则其实是说 keep it easy understand。让代码尽可能易于理解。<br>
 要看一个做法是否牺牲了理解性。易理解才是目的。所谓的代码长短，简洁与否，效率高低，都不是重点，不要纠结在这种事情上。</p>
-<p>*** DRY（don't repeat yourself） 原则<br>
+<p><strong>DRY（don't repeat yourself） 原则</strong><br>
 其实是，看代码可以在哪个角度/维度上进行解耦/独立/正交化。<br>
 使代码积木化。</p>
-<p>*** 高内聚，低耦合<br>
+<p><strong>高内聚，低耦合</strong><br>
 这个原则有一个非常精道的阐述，「缩小因功能改动而导致的代码改动范围」。换言之，使任何改动的影响范围尽可能小和集中。</p>
-<p>*** 迪米特法则<br>
+<p><strong>迪米特法则</strong><br>
 这个原则远不如它的另一个名字来的直观、精妙、令人回味，「最小知识原则」。<br>
 不该知道的就不需要知道。脑中浮现出傻强的形象：「这个东西我不需要知道太多，老大们知道就可以了。我主要负责冲锋。」</p>
-<p>*** 下面是一些更为零散的点</p>
+<p><strong>下面是一些更为零散的点</strong></p>
 <p>基于最小接口，而非最大实现编程。<br>
 这也是最小知识原则的一个体现。</p>
 <p>如果一个功能的改动，经常不得不跨团队、跨项目、跨系统才能完成，那么说明模块的划分有问题。职责不够清晰，耦合比较严重。</p>
