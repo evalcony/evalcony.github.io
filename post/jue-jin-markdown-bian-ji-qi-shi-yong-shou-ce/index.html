@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>掘金－Markdown 编辑器使用手册 | evalcony</title>
+<meta name="description" content="不改少年">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://evalcony.github.io/favicon.ico?v=1578440571573">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://evalcony.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://evalcony.github.io">
+        <img class="avatar" src="https://evalcony.github.io/images/avatar.png?v=1578440571573" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://evalcony.github.io">
+        <h1 class="site-title">evalcony</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="https://evalcony.github.io" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/post/flag" class="menu purple-link">
+            flag
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">掘金－Markdown 编辑器使用手册</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-01-08</span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="用掘金-markdown-编辑器写文章">用掘金－Markdown 编辑器写文章</h3>
+<p>欢迎使用 掘金－Markdown 编辑器撰写技术文章，只专注于内容和技术，不再费心排版的问题。这是一份简要的 Markdown 引导指南，希望可以帮助您顺利的开始使用 Markdown 编辑器。</p>
+<h3 id="丰富的快捷键">丰富的快捷键</h3>
+<p>本 Markdown 编辑器支持丰富的格式快捷键，可以非常便捷、轻松的使用 Markdown 语言，形成优美的排版和内容格式。</p>
+<p>支持的快捷键有：</p>
+<ul>
+<li>加粗： <code>Ctrl/Cmd + B</code></li>
+<li>标题： <code>Ctrl/Cmd + H</code></li>
+<li>插入链接： <code>Ctrl/Cmd + K</code></li>
+<li>插入代码： <code>Ctrl/Cmd + Shift + C</code></li>
+<li>行内代码： <code>Ctrl/Cmd + Shift + K</code></li>
+<li>插入图片： <code>Ctrl/Cmd + Shift + I</code></li>
+<li>无序列表： <code>Ctrl/Cmd + Shift + L</code></li>
+<li>撤销： <code>Ctrl/Cmd + Z</code></li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="" alt="" loading="lazy"></figure>
+<h3 id="常用语法">常用语法</h3>
+<h4 id="标题">标题</h4>
+<blockquote>
+<p>语法格式：** '#'+'空格'+'文本' **</p>
+</blockquote>
+<h1 id="一级标题">一级标题</h1>
+<h2 id="二级标题">二级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h4 id="四级标题">四级标题</h4>
+<h5 id="五级标题">五级标题</h5>
+<h6 id="六级标题">六级标题</h6>
+<h4 id="列表">列表</h4>
+<blockquote>
+<p>无序列表语法格式：** '-' + '空格' ＋ '文本' **</p>
+</blockquote>
+<ul>
+<li>文本一</li>
+<li>文本二</li>
+<li>文本三</li>
+</ul>
+<blockquote>
+<p>有序列表语法格式：** '数字' + '.' + '空格' + '文本' **</p>
+</blockquote>
+<ol>
+<li>文本一</li>
+<li>文本二</li>
+<li>文本三</li>
+</ol>
+<blockquote>
+<p>任务列表语法格式：** '-' + '空格' + '[ ]' + '文本' **</p>
+</blockquote>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6016957"><label class="task-list-item-label" for="task-item-6016957"> 文本一</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8962324"><label class="task-list-item-label" for="task-item-8962324"> 文本二</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4244647"><label class="task-list-item-label" for="task-item-4244647"> 文本三</label></li>
+</ul>
+<h4 id="链接和图片">链接和图片</h4>
+<p>在 Markdown 中插入链接不需要其他按钮，你只需要使用<code>［显示文本］(链接地址)</code>这样的格式语法即可。例如：<br>
+<a href="https://gold.xitu.io">稀土掘金</a><br>
+插入图片的语法与插入链接的语法很像，只是前面多了一个 <code>!</code>.语法如下：<br>
+<code>![图片的标注](图片链接地址)</code></p>
+<h4 id="引用">引用</h4>
+<blockquote>
+<p>语法：** '&gt;'+'空格'+'文本' **</p>
+</blockquote>
+<p>例如：</p>
+<blockquote>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。</p>
+</blockquote>
+<h4 id="代码">代码</h4>
+<p>如下是代码段的语法：</p>
+<pre>
+```编程语言
+ 这是代码段
+```
+</pre>
+<p>例如：</p>
+<pre><code class="language-python">def bubbleSort(alist):
+ for passnum in range(len(alist)-1,0,-1):
+ #print alist,passnum
+ for i in range(passnum):
+ if alist[i]&gt;alist[i+1]:
+ temp = alist[i]
+ alist[i] = alist[i+1]
+ alist[i+1] = temp
+ return alist
+</code></pre>
+<h4 id="表格">表格</h4>
+<p><strong>Markdown　Extra</strong>　表格语法：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iPhone</td>
+<td>$560</td>
+</tr>
+<tr>
+<td>iPad</td>
+<td>$780</td>
+</tr>
+<tr>
+<td>iMac</td>
+<td>$1000</td>
+</tr>
+</tbody>
+</table>
+<p>可以使用冒号来定义对齐方式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">项目</th>
+<th style="text-align:right">价格</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">iPhone</td>
+<td style="text-align:right">6000 元</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:left">iPad</td>
+<td style="text-align:right">3800 元</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">iMac</td>
+<td style="text-align:right">10000 元</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h4 id="结语">结语</h4>
+<p>以上是最常见的 Markdown 的语法和格式，如果你还希望深入的学习 Markdown，可以参考这里<a href="https://www.appinn.com/markdown/">Markdown语法</a>，非常感谢使用** 掘金－Markdown 编辑器**,希望为您提供舒适的写作体验。</p>
+
+          </div>
+        </div>
+
+        
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">不改少年</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://evalcony.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
