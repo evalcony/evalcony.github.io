@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>Hello Gridea | evalcony</title>
+<title>单元测试（1） | evalcony</title>
 <meta name="description" content="不改少年">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,51 +86,61 @@
       <div class="content-container">
         <div class="post-detail">
           
-            <div class="feature-container" style="background-image: url('https://evalcony.github.io/post-images/hello-gridea.png')">
-            </div>
-          
-          <h2 class="post-title">Hello Gridea</h2>
+          <h2 class="post-title">单元测试（1）</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2018-12-12</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://evalcony.github.io/tag/jxVGEuKxX">
-                    Gridea
-                    
-                  </a>
-                
-              </span>
+            <span><i class="icon-calendar-outline"></i> 2020-01-08</span>
             
           </div>
           <div class="post-content">
-            <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+            <ol>
+<li>
+<p>测试基类<br>
+每次创建测试类，手动写类名上的一些测试相关注解太麻烦，就先写一个基类，然后其他的类都继承该基类，就不用再写注解了。</p>
+</li>
+<li>
+<p>打包测试<br>
+一次性测试若干个类</p>
+</li>
+</ol>
+<pre><code>@RunWith(Suite.class)
+@Suite.SuiteClasses({Test1.class, Test2.class})
+public class TestSuits {
+    //不用写代码，只需要注解即可
+}
+// 这个类就对Test1, Test2 这2个测试类进行打包测试了
+</code></pre>
+<ol start="3">
+<li>
+<p>相关注解<br>
+@Ignore 忽略该测试方法、测试类<br>
+@BeforeClass 在所有测试方法执行前执行<br>
+@Before 在每一个测试方法被运行前执行一次<br>
+@AfterClass 在所有测试方法执行后执行<br>
+@After 在每一个测试方法运行后执行一次<br>
+@Test(excepted==xx.class,timeout=毫秒数) 修饰一个方法为测试方法，excepted参数可以忽略某些异常类<br>
+@Transactional 每个测试方法结束后进行回滚</p>
+</li>
+<li>
+<p>Mock<br>
+mock的含义是说，模拟测试。而非真的调用该方法。<br>
+在mock的方式出来之前的做法，是自己写模拟接口，手动造数据进行数据模拟。<br>
+在mock的方式出来之后，</p>
+</li>
+</ol>
+<h1 id="todo">todo</h1>
 
           </div>
         </div>
 
         
+          <div class="next-post">
+            <a class="purple-link" href="https://evalcony.github.io/post/she-ji-mo-shi-xin-de-1">
+              <h3 class="post-title">
+                下一篇：设计模式心得（1）
+              </h3>
+            </a>
+          </div>
+          
       </div>
 
       

@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>良好代码的基本看法 | evalcony</title>
+<meta name="description" content="不改少年">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://evalcony.github.io/favicon.ico?v=1578491678549">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://evalcony.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://evalcony.github.io">
+        <img class="avatar" src="https://evalcony.github.io/images/avatar.png?v=1578491678549" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://evalcony.github.io">
+        <h1 class="site-title">evalcony</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="https://evalcony.github.io" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://evalcony.github.io/post/flag" class="menu purple-link">
+            flag
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">良好代码的基本看法</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-01-08</span>
+            
+          </div>
+          <div class="post-content">
+            <p>心中想着这几个观念，代码质量就能得到基本的保障<br>
+简洁，干脆直接，结构清晰，职责明确描述准确符合期待，风格统一。</p>
+<ol>
+<li>命名准确，无歧义，不误导，见字如面，无需深入查看代码细节即可准确理解代码。这个的前提是建立在对代码行为的精准描述上。
+<ol>
+<li>如果代码发生变动，要看是否功能和命名不相符。如果有，要权衡是新增方法，还是对名字进行修改。这个工作最好早做，免得以后埋坑。</li>
+</ol>
+</li>
+<li>命名便于理解，接近自然语言。命名是给人看的，太短的看不懂，太长的看起来费力。要取一个长度短到不至于引起误解的名字。追求简洁的命名。但不影响理解是第一位的。
+<ol>
+<li>提升的方式，可以试着去读代码，看是否能比较接近自然语言的方式读下来。</li>
+</ol>
+</li>
+<li>控制每行的长度。单行长度比较长的代码，需要优化。</li>
+<li>单词、缩略书写正确。</li>
+<li>大小写、命名风格等符合规范。驼峰之类的不说了。避免拼音命名。更要避免混用。非要混用，要控制范围和数量。</li>
+<li>缩进，空格，符合规范。如 if、 while、else 等之后的空格。运算符前后的空格。</li>
+<li>统一对象，前后命名最好一致。在系统内部最好一致。避免出现在一个地方叫 A ，在另一个地方叫 B 。</li>
+<li>命名的风格上，考虑一致性。
+<ol>
+<li>和项目整体的风格和习惯一致。要尽可能提高一致性的评价标准的优先级。</li>
+<li>相似功能，命名采取相似结构和方式。比如，2个查询的方法，要么都以 query 开头，要么都以 find 开头，避免随意使用的情况。</li>
+<li>约定俗成的命名，可以沿用。比如 for 循环里面的i，j 等。可改可不改，问题不大。尤其对于简单的循环而言，没有改的必要。</li>
+</ol>
+</li>
+<li>将代码放在合适的位置。
+<ol>
+<li>不要随意写接口，随意放代码。参见第1条，为你的功能想一个准确的名字。</li>
+<li>常量的位置需要设计。不是都扔进一个常量类就完事的。时间一长，这个常量类膨胀起来很难维护，而且也搞不清里面什么意思，在哪里使用，影响范围。</li>
+</ol>
+</li>
+<li>避免类膨胀。对我而言，超过500-600行的一个类，就不应继续增加代码了，要考虑将新功能移到新的类中，或者重新组织方法，考虑重构。</li>
+<li>代码设计上，高内聚，低耦合。它所体现出来的就是，一个类的依赖关系变得很清晰，结构化更明显，依赖关系变少。类会变多，但是职责更清晰，更容易复用和维护。</li>
+<li>对效率有正确评估。不应出现明显低效的代码。代码不是能用、不出错就够了的。</li>
+<li>方法中，对输入输出有注释。尤其对于一些复杂的情况。</li>
+<li>对代码的注释，意图、设计性注释的必要性，要强过功能性注释。</li>
+<li>注释要附带更新日期。不然不知道这个注释的有效期。（考虑到愿意维护注释的人很少，所以还是好好考虑命名的事吧。）</li>
+<li>方法要尽可能短。控制在几十行内比较好。再长的化，要思考代码在设计上是不是有问题。</li>
+<li>if 层次要尽可能少。最好是顺着就能直接读下来，顶多有1层 if 结构。</li>
+<li>减少 if 层次的方法：
+<ol>
+<li>提前return。这是最容易掌握，代价最小，而且效果也最明显。</li>
+<li>结构封装。将一大块结构封装为一个方法。</li>
+<li>向策略模式等转化。</li>
+<li>将条件组合映射为状态值，把一个流程判断变成查询过程。</li>
+</ol>
+</li>
+<li>表设计合理。要先考虑业务，再设计表结构。这样可以省去日后很多麻烦。尤其是数据膨胀带来的各种问题。一个设计不合理的表，会让代码变得不必要的复杂。本来很简单的事情，要么多做很多事情，要么相关代码繁冗。</li>
+</ol>
+<p>我在日常中忍不住骂过的代码</p>
+<ol>
+<li>这代码为什么这么长，为什么都糅在一起。</li>
+<li>这变量名怎么这么长，而且长的都差不多。</li>
+<li>这 var1, var2 都是些什么东西。</li>
+<li>为什么一个类里面几十个依赖的 service 。而且连 dao 都有。</li>
+<li>为什么这个方法在这个类里。</li>
+<li>balcklist。</li>
+<li>call_cell 居然是通话记录。</li>
+<li>一个constant类1千多行。</li>
+<li>注释跟代码对不上。</li>
+<li>同样的代码到处 copy</li>
+<li>多级 if 嵌套</li>
+<li>为什么 redis 操作跟业务代码耦合在一起。</li>
+<li>为什么一个 http 工具类里面有十几个 post 方法。</li>
+<li>为什么没缩进和空格。</li>
+<li>为什么类名大写小写都有。</li>
+<li>为什么一个 dao 层方法到处都在操作。</li>
+<li>为什么代码一点形式美感都没有。</li>
+</ol>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://evalcony.github.io/post/dan-yuan-ce-shi-1">
+              <h3 class="post-title">
+                下一篇：单元测试（1）
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">不改少年</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://evalcony.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
